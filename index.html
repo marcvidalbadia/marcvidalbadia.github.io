@@ -52,25 +52,26 @@
       gap: 20px; /* Space between columns */
       margin-bottom: 20px; /* Space at the bottom */
     }
-
     .column {
       flex: 1; /* Each column takes up equal space */
       min-width: 200px; /* Minimum width for columns */
     }
 
     .position-title {
-      font-size: 12px; 
+      font-size: 14px; 
       font-weight: bold; /* Bold font for university name */
       margin-bottom: 5px; /* Space below title */
-    }
-
+    }     
+    .position-title2 {
+      font-size: 14px; 
+      margin-bottom: 5px; /* Space below title */
+    }      
     .light-text {
       font-size: 12px; /* Smaller font for details */
       color: #555; /* Grey color for details */
       font-weight: 300; /* Light font weight */
       margin-bottom: 2px; /* Space below each detail */
     }
-
     .position-details {
       font-size: 12px; /* Smaller font for details */
       color: #555; /* Grey color for details */
@@ -96,46 +97,47 @@
       font-size: 14px; /* Font size for email link */
       color: #1d4ed8; /* Blue color for email link */
     }
+      
     /* Mobile first styles */
-.academic-positions {
-  display: flex;
-  flex-direction: column;
-  gap: 20px; /* Space between positions */
-}
+    .academic-positions {
+      display: flex;
+      flex-direction: column;
+      gap: 20px; /* Space between positions */
+    }
+    .position-wrapper {
+      display: flex;
+      flex-direction: column; /* Stack columns vertically by default */
+      gap: 10px; /* Space between columns in each position */
+    }
+    .position-column {
+      /* Each column takes up equal space */
+      width: 100%; /* Full width of the wrapper */
+    }
 
-.position-wrapper {
-  display: flex;
-  flex-direction: column; /* Stack columns vertically by default */
-  gap: 10px; /* Space between columns in each position */
-}
+    /* Media queries for larger screens */
+    @media (min-width: 768px) {
+      .academic-positions {
+        flex-direction: column; /* Stacking positions vertically */
+      }
 
-.position-column {
-  /* Each column takes up equal space */
-  width: 100%; /* Full width of the wrapper */
-}
+      .position-wrapper {
+        flex-direction: row; /* Align columns side by side */
+        justify-content: space-between; /* Space between columns */
+      }
 
-/* Media queries for larger screens */
-@media (min-width: 768px) {
-  .academic-positions {
-    flex-direction: column; /* Stacking positions vertically */
-  }
-
-  .position-wrapper {
-    flex-direction: row; /* Align columns side by side */
-    justify-content: space-between; /* Space between columns */
-  }
-
-  .position-column {
-    width: 48%; /* Adjust width for columns to fit side by side */
-  }
-}
-
+      .position-column {
+        width: 48%; /* Adjust width for columns to fit side by side */
+      }
+    }
   </style>
+    <!-- END CSS -->
+    <!-- END CSS -->
+    <!-- END CSS -->
     </head>
     <!-- BODY -->
     <!-- BODY -->
     <!-- BODY -->
-  <body class="bg-beige-100 p-4">
+  <body class="bg-beige-200 p-4">
 <div class="container mx-auto px-4 sm:px-8 md:px-12 py-8">
   <div class="bg-white flex flex-col space-y-12 rounded-lg p-4 sm:p-6 md:p-8 lg:p-12"> <!-- ..START.. -->
         <div class="text-center -mb-6">
@@ -181,8 +183,8 @@
           <div class="light-text">Postdoc Fellow</div>
         </div>
         <div>
-          <div class="position-title">Dept of Data Analysis</div>
-          <div class="position-details">Conducting research in structural equation modeling, functional data analysis with applications in neuroscience</div>
+          <div class="position-title2">Dept of Data Analysis</div>
+          <div class="light-text">Conducting research in structural equation modeling, functional data analysis with applications in neuroscience</div>
         </div>
       </div>
     </div>
@@ -194,9 +196,9 @@
           <div class="light-text">2022 - Present</div>
           <div class="light-text">Guest Researcher</div>
         </div>
-        <div>
-          <div class="position-title">Research Group Music Evoked Brain Plasticity, Dept of Neurology</div>
-          <div class="position-details">Investigating physiological signatures of motor control and emotion during music interventions</div>
+        <div>   
+          <div class="position-title2">Research Group Music Evoked Brain Plasticity, Dept of Neurology</div>
+          <div class="light-text">Investigating physiological signatures of motor control and emotion during music interventions</div>
         </div>
       </div>
     </div>
@@ -209,8 +211,8 @@
           <div class="light-text">PhD Fellow</div>
         </div>
         <div>
-          <div class="position-title">IPEM Institute, Dept of Statistics and Institute of Mathematics</div>
-          <div class="position-details">Conducting research in music neuroscience and functional data analysis</div>
+          <div class="position-title2">IPEM Institute, Dept of Statistics and Institute of Mathematics</div>
+          <div class="light-text">Conducting research in music neuroscience and functional data analysis</div>
         </div>
       </div>
     </div>
@@ -259,7 +261,7 @@
             </div>
              <div class="bg-gray-100 p-4  rounded-lg ">
               <p class="font-medium">
-              Bi-Smoothed Functional Independent Component Analysis for EEG Artifact Removal
+              Bi-smoothed functional independent component analysis for EEG artifact removal
               </p>
               <p class="italic text-xs mb-2">
                Vidal, M., Rosso, M., Aguilera, A.M. (2021)
