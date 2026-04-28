@@ -17,6 +17,7 @@
     }
     .icon-link i {
       color: #666;
+      font-size: 25px;
       margin-right: 6px;
       transition: color 0.3s ease;
     }
@@ -37,6 +38,14 @@
     .small-button:hover {
       background-color: #ccc;
     }
+.pub-list > div {
+  padding: 6px 10px;
+  border-radius: 6px;
+}
+
+.pub-list > div:nth-child(even) {
+  background-color: #f7f7f7; /* gris muy suave, más claro que botones */
+}
   </style>
 </head>
 <body class="bg-white text-gray-800 px-6 py-6">
@@ -70,33 +79,36 @@ My research focuses on statistical methodology for high-dimensional and function
       <div class="mt-1">
         <a href="https://drive.google.com/file/d/1XX8XoYvjJOtW2STAqVMU1PfiIHptLPMT/view?usp=sharing" class="small-button" target="_blank">Curriculum Vitae</a>
         <a href="https://github.com/marcvidalbadia" class="small-button" target="_blank">Software</a>
+        <a href="https://scholar.google.com/citations?hl=en&user=_uAst7QAAAAJ" class="small-button" target="_blank">Google scholar</a>
       </div>
     </div>
 
     <div>
 <h2 class="text-base font-light mb-1 flex items-center">
   <span class="mr-2">Publications (selected)</span>
+<!---
   <i class="fas fa-arrow-right text-gray-400 text-xs mr-1"></i>
   <a href="https://scholar.google.com/citations?hl=en&user=_uAst7QAAAAJ" target="_blank" class="text-blue-600 hover:underline">
     <i class="fab fa-google"></i>
   </a>
+--->
 </h2>
-      <div class="text-sm leading-tight space-y-1">
+      <div class="text-sm leading-tight space-y-1 pub-list">
           <div>
-          – <strong>Noise-resilient penalty operators based on statistical differentiation schemes</strong><br>
+          <strong>Noise-resilient penalty operators based on statistical differentiation schemes</strong><br>
           Vidal, M., Y. Rosseel (2026) <br> <em>Preprint</em>
           <a href="https://arxiv.org/abs/2601.11033" class="small-button" target="_blank">arXiv</a>
 
         </div>
 
           <div>
-          – <strong>A family of moment operators for functional data and its discriminative properties</strong><br>
+          <strong>A family of moment operators for functional data and its discriminative properties</strong><br>
           Vidal, M. (2025) In <em>New Trends in Functional Statistics and Related Fields</em>, eds. G. Aneiros, E.G. Bongiorno, A. Goia, and M. Hušková. <br>
           <em>Contributions to Statistics, pp. 557–564. Springer, Cham.</em> <span class="text-gray-600 text-xs">(IWFOS 2025)</span>
           <a href="https://doi.org/10.1007/978-3-031-92383-8_66" class="small-button" target="_blank">DOI</a>
         </div>
         <div>
-          – <strong>Functional independent component analysis by choice of norm: A framework for near-perfect classification</strong><br>
+          <strong>Functional independent component analysis by choice of norm: A framework for near-perfect classification</strong><br>
           Vidal, M., M. Leman,  A.M. Aguilera (2025)<br> <em>Advances in Data Analysis and Classification</em>
           <a href="https://arxiv.org/abs/2412.17971" class="small-button" target="_blank">arXiv</a>
           <a href="https://doi.org/10.1007/s11634-024-00622-5" class="small-button" target="_blank">DOI</a>
@@ -104,14 +116,14 @@ My research focuses on statistical methodology for high-dimensional and function
         </div>
 
         <div>
-          – <strong>A tutorial for understanding SEM using R: Where do all the numbers come from?</strong><br>
+          <strong>A tutorial for understanding SEM using R: Where do all the numbers come from?</strong><br>
           Rosseel, Y., M. Vidal (2025)<br>
           <em>British Journal of Mathematical and Statistical Psychology 00: 1–38</em>
           <a href="https://bpspsychub.onlinelibrary.wiley.com/doi/10.1111/bmsp.70003" class="small-button" target="_blank">DOI</a>
         </div>
           
         <div>
-          – <strong>Modeling emotional arousal with turbulence measured by EEG</strong><br>
+          <strong>Modeling emotional arousal with turbulence measured by EEG</strong><br>
           Vidal, M., N. Moura, B. Van Kerrebroeck, A. M. Aguilera, T. H. Fritz, and M. Leman (2025)<br> <em> Psychophysiology 62(6): e70093</em>
           <a href="https://doi.org/10.1111/psyp.70093" class="small-button" target="_blank">DOI</a>
         </div>
