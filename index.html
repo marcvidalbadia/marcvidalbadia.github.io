@@ -20,14 +20,41 @@
     /* --- Identity block --- */
     .identity-row {
       display: flex;
-      align-items: flex-start;
+      align-items: center;
       gap: 16px;
     }
+    @media (max-width: 500px) {
+      .identity-row {
+        align-items: flex-start;
+      }
+    }
+    .identity-photo {
+      flex-shrink: 0;
+      width: 136px;
+      height: 136px;
+    }
     .identity-photo img {
-      width: 96px;
-      height: 96px;
-      object-fit: cover;
-      display: block;
+      width: 136px !important;
+      height: 136px !important;
+      max-width: 136px !important;
+      min-width: 136px !important;
+      object-fit: cover !important;
+      display: block !important;
+    }
+    .name-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .name-row-icons {
+      margin: 0;
+    }
+    @media (max-width: 500px) {
+      .name-row {
+        justify-content: flex-start;
+      }
     }
 
     .icon-link i {
@@ -51,8 +78,9 @@
       margin-left: 6px;
       transition: background 0.2s ease;
     }
-    .small-button:hover {
-      background-color: #ccc;
+    .research-statement {
+      margin-top: 14px;
+      margin-bottom: 0;
     }
 
     /* --- Section tabs, at the level of the "Publications" heading --- */
@@ -101,6 +129,13 @@
     }
     .pub-list {
       font-size: 14px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid #e8e4dc;
+      margin-bottom: 2px;
+    }
+    .pub-list:last-of-type {
+      border-bottom: none;
+      padding-bottom: 0;
     }
     .pub-list > div {
       padding: 6px 10px;
@@ -108,7 +143,7 @@
       background-color: #ffffff;
     }
     .pub-list > div:nth-child(even) {
-      background-color: #f7f7f7 !important;
+      background-color: #f6f1e9 !important;
     }
     .pub-title {
       font-size: 14.5px;
@@ -126,35 +161,34 @@
 
     <div>
       <div class="identity-row">
-        <!-- Optional photograph: uncomment and add an image to enable.
         <div class="identity-photo">
-          <img src="photo.jpg" alt="Marc Vidal">
+          <img src="photo.png" alt="Marc Vidal">
         </div>
-        -->
-        <div>
-          <h1 class="text-lg font-semibold mb-1">Marc Vidal</h1>
+        <div style="flex: 1; min-width: 0;">
+          <div class="name-row">
+            <h1 class="text-lg font-semibold mb-1">Marc Vidal</h1>
+            <div class="flex flex-wrap gap-1 name-row-icons">
+              <a href="https://scholar.google.com/citations?hl=en&user=_uAst7QAAAAJ" class="icon-link" target="_blank" title="Google Scholar"><i class="fab fa-google"></i></a>
+              <a href="https://github.com/marcvidalbadia" class="icon-link" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+              <a href="https://research.ugent.be/web/person/marc-vidal-badia-0/en" class="icon-link" target="_blank" title="Ghent University profile"><i class="fas fa-landmark"></i></a>
+              <a href="mailto:marc.vidalbadia@ugent.be" class="icon-link" title="Email"><i class="fas fa-envelope-square"></i></a>
+            </div>
+          </div>
           <p class="text-gray-600 text-xs mb-1 italic">
             PhD/MSc in Mathematical and Applied Statistics · PhD in Art Science
           </p>
           <p class="text-gray-600 text-xs mb-1">
             Research Associate, Ghent University &nbsp; &bull; &nbsp; Guest researcher, Max Planck Institute for Human Cognitive and Brain Sciences
           </p>
-          <div class="flex flex-wrap gap-1 my-2">
-            <a href="https://scholar.google.com/citations?hl=en&user=_uAst7QAAAAJ" class="icon-link" target="_blank"><i class="fab fa-google"></i></a>
-            <a href="https://github.com/marcvidalbadia" class="icon-link" target="_blank"><i class="fab fa-github"></i></a>
-            <a href="https://research.ugent.be/web/person/marc-vidal-badia-0/en" class="icon-link" target="_blank"><i class="fas fa-landmark"></i></a>
-            <a href="mailto:marc.vidalbadia@ugent.be" class="icon-link"><i class="fas fa-envelope-square"></i></a>
-          </div>
-        </div>
-      </div>
-
-      <p class="mb-1">
+          <p class="research-statement">
 My research focuses on mathematical and methodological statistics for functional and high-dimensional data, with particular interests in statistical representation, latent structure, and discrimination. I work on operator-based methods, dimensionality reduction, covariance structure models, and discrete functional data analysis. A central theme of my recent research is how finite-dimensional representations retain or alter statistical information present in an underlying infinite-dimensional model. Neurophysiological and neuroimaging data provide a recurring application setting for this work.
 </p>
-      <div class="my-2">
-        <a href="https://drive.google.com/file/d/1FkiXLnDcrACO9OaCovT3zfrRutUu25DA/view?usp=sharing" class="small-button" target="_blank">Curriculum Vitae</a>
-        <a href="https://github.com/marcvidalbadia" class="small-button" target="_blank">Software</a>
-        <a href="https://scholar.google.com/citations?hl=en&user=_uAst7QAAAAJ" class="small-button" target="_blank">Google scholar</a>
+          <div class="my-2" style="text-align: center;">
+            <a href="https://drive.google.com/file/d/1FkiXLnDcrACO9OaCovT3zfrRutUu25DA/view?usp=sharing" class="small-button" target="_blank">Curriculum Vitae</a>
+            <a href="https://github.com/marcvidalbadia" class="small-button" target="_blank">Software</a>
+            <a href="https://scholar.google.com/citations?hl=en&user=_uAst7QAAAAJ" class="small-button" target="_blank">Google scholar</a>
+          </div>
+        </div>
       </div>
     </div>
 
