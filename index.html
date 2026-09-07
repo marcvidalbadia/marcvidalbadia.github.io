@@ -34,7 +34,11 @@
     }
     @media (max-width: 500px) {
       .identity-row {
-        align-items: flex-start;
+        flex-direction: column;
+        align-items: center;
+      }
+      .identity-text {
+        width: 100%;
       }
     }
     .identity-photo {
@@ -220,7 +224,7 @@
         <div class="identity-photo">
           <img src="photo.png" alt="Marc Vidal">
         </div>
-        <div style="flex: 1; min-width: 0;">
+        <div class="identity-text" style="flex: 1; min-width: 0;">
           <div class="name-row">
             <h1 class="text-lg font-semibold mb-1">Marc Vidal</h1>
             <div class="flex flex-wrap gap-1 name-row-icons">
