@@ -36,6 +36,8 @@
       .identity-row {
         flex-direction: column;
         align-items: center;
+        position: relative;
+        padding-top: 40px;
       }
       .identity-text {
         width: 100%;
@@ -65,16 +67,11 @@
       margin: 0;
     }
     @media (max-width: 500px) {
-      .name-row {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-      .name-row h1 {
-        order: 2;
-      }
       .name-row-icons {
-        order: 1;
-        margin-bottom: 4px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin: 0;
       }
     }
 
